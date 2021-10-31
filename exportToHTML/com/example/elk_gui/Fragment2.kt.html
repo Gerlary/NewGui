@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>Fragment2.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Fragment2.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.elk_gui</span>
+
+<span class="s1">import android.annotation.SuppressLint</span>
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.view.LayoutInflater</span>
+<span class="s1">import android.view.View</span>
+<span class="s1">import android.view.ViewGroup</span>
+<span class="s1">import android.widget.*</span>
+<span class="s1">import androidx.core.view.isVisible</span>
+<span class="s1">import androidx.fragment.app.Fragment</span>
+<span class="s1">import com.example.elk_gui.storage.PersistantStorage</span>
+
+<span class="s0">class </span><span class="s1">Fragment2() : Fragment() {</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreateView(</span>
+        <span class="s1">inflater: LayoutInflater</span><span class="s0">,</span>
+        <span class="s1">container: ViewGroup?</span><span class="s0">,</span>
+        <span class="s1">savedInstanceState: Bundle?</span>
+    <span class="s1">): View? {</span>
+
+        <span class="s0">return </span><span class="s1">inflater.inflate(R.layout.profile_view</span><span class="s0">, </span><span class="s1">container</span><span class="s0">, false</span><span class="s1">)</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@SuppressLint(</span><span class="s2">&quot;ClickableViewAccessibility&quot;</span><span class="s1">)</span>
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onViewCreated(view: View</span><span class="s0">, </span><span class="s1">savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onViewCreated(view</span><span class="s0">, </span><span class="s1">savedInstanceState)</span>
+
+        <span class="s3">// Add Data to Database</span>
+
+        <span class="s0">var </span><span class="s1">exp: Int = </span><span class="s4">10</span>
+        <span class="s0">var </span><span class="s1">places: Int = </span><span class="s4">0</span>
+       <span class="s0">var </span><span class="s1">hooves: Int = PersistantStorage.getInt(</span><span class="s2">&quot;hooves&quot;</span><span class="s1">)</span>
+       <span class="s3">/* val db = Room.databaseBuilder( 
+            , 
+            AppDatabase::class.java, 
+            &quot;MyDatabase.db&quot; 
+        ).build() 
+ 
+        //val db = AppDatabase(this) 
+ 
+        var data = db?.userDao()?.gethooves() 
+        var hooves = data?.first()?.hooves 
+        *///var hooves: Int =</span>
+        <span class="s3">//var hooves: Int = data.</span>
+        <span class="s3">//hooves =args.currentUser.age</span>
+        <span class="s0">val </span><span class="s1">profileName: TextView = view.findViewById(R.id.profileName)</span>
+        <span class="s0">val </span><span class="s1">expText: TextView = view.findViewById(R.id.varTextAchievements)</span>
+        <span class="s0">val </span><span class="s1">placesText: TextView = view.findViewById(R.id.varTextPlaces)</span>
+        <span class="s0">val </span><span class="s1">hoovesText: TextView = view.findViewById(R.id.varTextHooves)</span>
+        <span class="s0">val </span><span class="s1">buttonAchievements: Button = view.findViewById(R.id.btnAchievements)</span>
+        <span class="s0">val </span><span class="s1">buttonShop: Button = view.findViewById(R.id.btnShop)</span>
+        <span class="s0">val </span><span class="s1">switchView: ViewFlipper = view.findViewById(R.id.viewSwitcher)</span>
+        <span class="s0">val </span><span class="s1">btnName: Button = view.findViewById(R.id.btnName)</span>
+        <span class="s0">val </span><span class="s1">textName: EditText = view.findViewById(R.id.dialogNameEt)</span>
+        <span class="s0">val </span><span class="s1">btnBack: Button = view.findViewById(R.id.dialogAgreeBtn)</span>
+
+        <span class="s1">profileName.text = PersistantStorage.getName(</span><span class="s2">&quot;name&quot;</span><span class="s1">)</span>
+        <span class="s1">expText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">exp</span><span class="s2">&quot;</span>
+        <span class="s1">placesText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">places</span><span class="s2">&quot;</span>
+        <span class="s1">hoovesText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">hooves</span><span class="s2">&quot;</span>
+
+        <span class="s1">buttonAchievements.setOnClickListener {</span>
+            <span class="s1">switchView.displayedChild = </span><span class="s4">3</span>
+        <span class="s1">}</span>
+        <span class="s1">btnName.setOnClickListener {</span>
+
+            <span class="s1">switchView.displayedChild = </span><span class="s4">2</span>
+            <span class="s1">btnBack.setOnClickListener {</span>
+                <span class="s1">PersistantStorage.addName(</span><span class="s2">&quot;name&quot;</span><span class="s0">, </span><span class="s1">textName.text.toString())</span>
+                <span class="s1">profileName.text = PersistantStorage.getName(</span><span class="s2">&quot;name&quot;</span><span class="s1">)</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">buttonShop.setOnClickListener {</span>
+            <span class="s1">switchView.displayedChild = </span><span class="s4">1</span>
+            <span class="s0">val </span><span class="s1">btnGet: Array&lt;Button?&gt; = arrayOfNulls(</span><span class="s4">4</span><span class="s1">)</span>
+            <span class="s1">btnGet[</span><span class="s4">0</span><span class="s1">] = view.findViewById(R.id.btnGet1)</span>
+            <span class="s1">btnGet[</span><span class="s4">1</span><span class="s1">] = view.findViewById(R.id.btnGet2)</span>
+            <span class="s1">btnGet[</span><span class="s4">2</span><span class="s1">] = view.findViewById(R.id.btnGet3)</span>
+            <span class="s1">btnGet[</span><span class="s4">3</span><span class="s1">] = view.findViewById(R.id.btnGet4)</span>
+            <span class="s0">val </span><span class="s1">checkIcon: Array&lt;ImageView?&gt; = arrayOfNulls(</span><span class="s4">4</span><span class="s1">)</span>
+            <span class="s1">checkIcon[</span><span class="s4">0</span><span class="s1">] = view.findViewById(R.id.shopCheckIcon1)</span>
+            <span class="s1">checkIcon[</span><span class="s4">1</span><span class="s1">] = view.findViewById(R.id.shopCheckIcon2)</span>
+            <span class="s1">checkIcon[</span><span class="s4">2</span><span class="s1">] = view.findViewById(R.id.shopCheckIcon3)</span>
+            <span class="s1">checkIcon[</span><span class="s4">3</span><span class="s1">] = view.findViewById(R.id.shopCheckIcon4)</span>
+
+            <span class="s0">if</span><span class="s1">(PersistantStorage.getTestValue(</span><span class="s2">&quot;shop1&quot;</span><span class="s1">)) {</span>
+                <span class="s1">btnGet[</span><span class="s4">0</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">checkIcon[</span><span class="s4">0</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+            <span class="s1">}</span>
+            <span class="s0">if</span><span class="s1">(PersistantStorage.getTestValue(</span><span class="s2">&quot;shop2&quot;</span><span class="s1">)) {</span>
+                <span class="s1">btnGet[</span><span class="s4">1</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">checkIcon[</span><span class="s4">1</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+            <span class="s1">}</span>
+            <span class="s0">if</span><span class="s1">(PersistantStorage.getTestValue(</span><span class="s2">&quot;shop3&quot;</span><span class="s1">)) {</span>
+                <span class="s1">btnGet[</span><span class="s4">2</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">checkIcon[</span><span class="s4">2</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+            <span class="s1">}</span>
+            <span class="s0">if</span><span class="s1">(PersistantStorage.getTestValue(</span><span class="s2">&quot;shop4&quot;</span><span class="s1">)) {</span>
+                <span class="s1">btnGet[</span><span class="s4">3</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">checkIcon[</span><span class="s4">3</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+            <span class="s1">}</span>
+
+            <span class="s1">btnGet[</span><span class="s4">0</span><span class="s1">]!!.setOnClickListener {</span>
+                <span class="s0">if </span><span class="s1">(hooves!! - </span><span class="s4">10 </span><span class="s1">&gt;= </span><span class="s4">0</span><span class="s1">) {</span>
+                    <span class="s1">hooves -= </span><span class="s4">10</span>
+                    <span class="s1">hoovesText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">hooves</span><span class="s2">&quot;</span>
+                    <span class="s1">PersistantStorage.addInt(</span><span class="s2">&quot;hooves&quot;</span><span class="s0">, </span><span class="s1">hooves)</span>
+                    <span class="s1">checkIcon[</span><span class="s4">0</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+                    <span class="s1">PersistantStorage.addTestValue(</span><span class="s2">&quot;shop1&quot;</span><span class="s0">,true</span><span class="s1">)</span>
+                    <span class="s1">btnGet[</span><span class="s4">0</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">btnGet[</span><span class="s4">1</span><span class="s1">]!!.setOnClickListener {</span>
+                <span class="s0">if </span><span class="s1">(hooves!! - </span><span class="s4">20 </span><span class="s1">&gt;= </span><span class="s4">0</span><span class="s1">) {</span>
+                    <span class="s1">hooves -= </span><span class="s4">20</span>
+                    <span class="s1">hoovesText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">hooves</span><span class="s2">&quot;</span>
+                    <span class="s1">checkIcon[</span><span class="s4">1</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+                    <span class="s1">PersistantStorage.addInt(</span><span class="s2">&quot;hooves&quot;</span><span class="s0">, </span><span class="s1">hooves)</span>
+                    <span class="s1">PersistantStorage.addTestValue(</span><span class="s2">&quot;shop2&quot;</span><span class="s0">,true</span><span class="s1">)</span>
+                    <span class="s1">btnGet[</span><span class="s4">1</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">btnGet[</span><span class="s4">2</span><span class="s1">]!!.setOnClickListener {</span>
+                <span class="s0">if </span><span class="s1">(hooves!! - </span><span class="s4">50 </span><span class="s1">&gt;= </span><span class="s4">0</span><span class="s1">) {</span>
+                    <span class="s1">hooves -= </span><span class="s4">50</span>
+                    <span class="s1">hoovesText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">hooves</span><span class="s2">&quot;</span>
+                    <span class="s1">PersistantStorage.addInt(</span><span class="s2">&quot;hooves&quot;</span><span class="s0">, </span><span class="s1">hooves)</span>
+                    <span class="s1">checkIcon[</span><span class="s4">2</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+                    <span class="s1">PersistantStorage.addTestValue(</span><span class="s2">&quot;shop3&quot;</span><span class="s0">,true</span><span class="s1">)</span>
+                    <span class="s1">btnGet[</span><span class="s4">2</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s1">btnGet[</span><span class="s4">3</span><span class="s1">]!!.setOnClickListener {</span>
+                <span class="s0">if </span><span class="s1">(hooves!! - </span><span class="s4">100 </span><span class="s1">&gt;= </span><span class="s4">0</span><span class="s1">) {</span>
+                    <span class="s1">hooves -= </span><span class="s4">100</span>
+                    <span class="s1">hoovesText.text = </span><span class="s2">&quot;</span><span class="s0">$</span><span class="s1">hooves</span><span class="s2">&quot;</span>
+                    <span class="s1">PersistantStorage.addInt(</span><span class="s2">&quot;hooves&quot;</span><span class="s0">, </span><span class="s1">hooves)</span>
+                    <span class="s1">checkIcon[</span><span class="s4">3</span><span class="s1">]!!.setImageResource(R.drawable.check)</span>
+                    <span class="s1">PersistantStorage.addTestValue(</span><span class="s2">&quot;shop4&quot;</span><span class="s0">,true</span><span class="s1">)</span>
+                    <span class="s1">btnGet[</span><span class="s4">3</span><span class="s1">]!!.isVisible = </span><span class="s0">false</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

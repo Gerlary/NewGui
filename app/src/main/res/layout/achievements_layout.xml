@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/achievementTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Отличник"
+        app:layout_constraintLeft_toRightOf="@id/achievementCheckIcon1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementDescription1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Выполнить один тест на отлично"
+        app:layout_constraintLeft_toLeftOf="@id/achievementTitle1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/achievementTitle1"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementPoints1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="5"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/achievementDescription1"
+        app:layout_constraintTop_toBottomOf="@id/achievementDescription1"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/achievementCheckIcon1"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/achievementTitle1"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints1"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/achievementPointsIcon1"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/achievementPoints1"
+        app:layout_constraintTop_toTopOf="@id/achievementPoints1"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints1"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/points"
+        />
+
+    <TextView
+        android:id="@+id/achievementTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Гений"
+        app:layout_constraintLeft_toRightOf="@id/achievementCheckIcon2"
+        app:layout_constraintTop_toBottomOf="@id/achievementPoints1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementDescription2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Выполнить все тесты на отлично"
+        app:layout_constraintLeft_toLeftOf="@id/achievementTitle2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/achievementTitle2"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementPoints2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="50"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/achievementDescription2"
+        app:layout_constraintTop_toBottomOf="@id/achievementDescription2"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/achievementCheckIcon2"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/achievementTitle2"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints2"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/achievementPointsIcon2"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/achievementPoints2"
+        app:layout_constraintTop_toTopOf="@id/achievementPoints2"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints2"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/points"
+        />
+
+    <TextView
+        android:id="@+id/achievementTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Собрать их всех!"
+        app:layout_constraintLeft_toRightOf="@id/achievementCheckIcon3"
+        app:layout_constraintTop_toBottomOf="@id/achievementPoints2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementDescription3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Посетить все места на карте"
+        app:layout_constraintLeft_toLeftOf="@id/achievementTitle3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/achievementTitle3"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementPoints3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="20"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/achievementDescription3"
+        app:layout_constraintTop_toBottomOf="@id/achievementDescription3"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/achievementCheckIcon3"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/achievementTitle3"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints3"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/achievementPointsIcon3"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/achievementPoints3"
+        app:layout_constraintTop_toTopOf="@id/achievementPoints3"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints3"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/points"
+        />
+
+    <TextView
+        android:id="@+id/achievementTitle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Коллекционер"
+        app:layout_constraintLeft_toRightOf="@id/achievementCheckIcon4"
+        app:layout_constraintTop_toBottomOf="@id/achievementPoints3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementDescription4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Получить все промокоды"
+        app:layout_constraintLeft_toLeftOf="@id/achievementTitle4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/achievementTitle4"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/achievementPoints4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="25"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/achievementDescription4"
+        app:layout_constraintTop_toBottomOf="@id/achievementDescription4"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/achievementCheckIcon4"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/achievementTitle4"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints4"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/achievementPointsIcon4"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/achievementPoints4"
+        app:layout_constraintTop_toTopOf="@id/achievementPoints4"
+        app:layout_constraintBottom_toBottomOf="@id/achievementPoints4"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/points"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

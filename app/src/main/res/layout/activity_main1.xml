@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz.QuizActivity">
+
+    <TextView
+        android:id="@+id/choselvl"
+        android:text="Choose level"
+        android:textSize = "2sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/firstlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="1"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/secondlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="36dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="2"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/thirdlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="36dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="3"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/fourthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="36dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="4"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/fifthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="136dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="5"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/sixthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="136dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="6"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/seventhlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="136dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="7"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/eighthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="136dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="8"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/ninethlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="236dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="9"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/tenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="236dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="10"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/eleventhlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="236dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="11"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/twelvelvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="236dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="12"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/thirteenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="336dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="13"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+    <Button
+        android:id="@+id/fourteenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="336dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="14"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/fifteenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="336dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="15"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/sixteenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="336dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="16"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/seventeenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="436dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="17"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/eighteenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="436dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="18"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/nineteenthlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="436dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="19"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/twentylvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="436dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="20"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/BtnBacknow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="528dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text=">"
+        android:textSize="28sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+
+    <Button
+        android:id="@+id/twentyfirstlvlbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="528dp"
+        android:width="50dp"
+        android:height="100dp"
+        android:backgroundTint="#0000ff"
+        android:fontFamily="sans-serif-medium"
+        android:text="21"
+        android:textSize="28sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choselvl" />
+</androidx.constraintlayout.widget.ConstraintLayout>

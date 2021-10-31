@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/shopTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Промокод 1"
+        app:layout_constraintLeft_toRightOf="@id/shopCheckIcon1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/shopDescription1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Description"
+        app:layout_constraintLeft_toLeftOf="@id/shopTitle1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopTitle1"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/shopPoints1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="10"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/shopDescription1"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription1"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/shopCheckIcon1"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shopTitle1"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints1"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/shopHoovesIcon1"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/shopPoints1"
+        app:layout_constraintTop_toTopOf="@id/shopPoints1"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints1"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/hoove_coin"
+        />
+
+    <Button
+        android:id="@+id/btnGet1"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="8sp"
+        android:textStyle="normal"
+        android:text="Получить"
+        app:layout_constraintLeft_toRightOf="@id/shopHoovesIcon1"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription1"
+        android:layout_marginLeft="10dp"
+    />
+
+    <TextView
+        android:id="@+id/shopTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Промокод 2"
+        app:layout_constraintLeft_toRightOf="@id/shopCheckIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/shopPoints1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/shopDescription2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Description"
+        app:layout_constraintLeft_toLeftOf="@id/shopTitle2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopTitle2"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/shopPoints2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:text="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/shopDescription2"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription2" />
+
+    <ImageView
+        android:id="@+id/shopCheckIcon2"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shopTitle2"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints2"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/shopHoovesIcon2"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/shopPoints2"
+        app:layout_constraintTop_toTopOf="@id/shopPoints2"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints2"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/hoove_coin"
+        />
+
+    <Button
+        android:id="@+id/btnGet2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="8sp"
+        android:textStyle="normal"
+        android:text="Получить"
+        app:layout_constraintLeft_toRightOf="@id/shopHoovesIcon2"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription2"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/shopTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Промокод 3"
+        app:layout_constraintLeft_toRightOf="@id/shopCheckIcon3"
+        app:layout_constraintTop_toBottomOf="@+id/shopPoints2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/shopDescription3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Description"
+        app:layout_constraintLeft_toLeftOf="@id/shopTitle3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopTitle3"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/shopPoints3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="50"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/shopDescription3"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription3"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/shopCheckIcon3"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shopTitle3"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints3"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/shopHoovesIcon3"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/shopPoints3"
+        app:layout_constraintTop_toTopOf="@id/shopPoints3"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints3"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/hoove_coin"
+        />
+
+    <Button
+        android:id="@+id/btnGet3"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="8sp"
+        android:textStyle="normal"
+        android:text="Получить"
+        app:layout_constraintLeft_toRightOf="@id/shopHoovesIcon3"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription3"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/shopTitle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Промокод 4"
+        app:layout_constraintLeft_toRightOf="@id/shopCheckIcon4"
+        app:layout_constraintTop_toBottomOf="@+id/shopPoints3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/shopDescription4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:text="Description"
+        app:layout_constraintLeft_toLeftOf="@id/shopTitle4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopTitle4"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/shopPoints4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:text="100"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/shopDescription4"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription4"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/shopCheckIcon4"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shopTitle4"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints4"
+        app:srcCompat="@drawable/locked"
+        />
+
+    <ImageView
+        android:id="@+id/shopHoovesIcon4"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toRightOf="@id/shopPoints4"
+        app:layout_constraintTop_toTopOf="@id/shopPoints4"
+        app:layout_constraintBottom_toBottomOf="@id/shopPoints4"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/hoove_coin"
+        />
+
+    <Button
+        android:id="@+id/btnGet4"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="8sp"
+        android:textStyle="normal"
+        android:text="Получить"
+        app:layout_constraintLeft_toRightOf="@id/shopHoovesIcon4"
+        app:layout_constraintTop_toBottomOf="@id/shopDescription4"
+        android:layout_marginLeft="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
